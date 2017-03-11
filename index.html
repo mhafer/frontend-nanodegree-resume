@@ -1,51 +1,108 @@
 <!DOCTYPE html>
-
-<!--
-This is an HTML document. It contains information about how elements in the website
-are arranged. In other words, it describes the layout of a website.
-
-I can't wait to see the resumes you put together!
-
-Cameron Pittman, Udacity Course Developer
--->
-
-<!--
-The <head> of a website generally links to important resources the page will
-need to load. You'll see a lot of <link>s to CSS files for styles and
-<scripts> for JavaScript files to build interactions.
--->
 <html>
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
+  <!-- icon font awesome -->
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+  <!-- bootstrap CSS reference -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
-
-
-
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-
+  <!-- Google maps -->
+  <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/bootstap.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBO_SYPTezs9Tn8SHqnAKEn6PDuHkf904U
+  "></script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
+<div class="container">
 
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
+  <!-- headliner -->
+  <header>
+    <div class="row">
+      <div  id="header" class="col-sm-12 col-md-12 col-lg-12 left-text">
+        <!-- data -->
+      </div>
+     </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+       <ul id="topContacts" class="flex-box"></ul>
+    </div>
+    <!-- intro -->
+    <div class="row intro-section">
+      <div id="myPic" class="col-sm-4 col-md-4 col-lg-4">
+      <!-- data -->
+      </div>
+      <div id="aboutMe" class="col-sm-8 col-md-8 col-lg-8">
+      <!-- data -->
+      </div>
+    </div>
+    <!-- skills -->
+    <div class="row skill-section">
+      <div id="skillsTitle" class="col-sm-12 col-md-12 col-lg-12">
+        <!-- data -->
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <ul id="mySkills" class="flex-box"></ul>
+        <!-- data -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Work Experience -->
+  <div class="row" style="clear: both;">
+    <div id="workExperience" class="col-sm-12 col-md-12 col-lg-12">
+      <h2>Work Experience</h2>
+      <!-- data -->
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="row">
+     <div id="projects" class="col-sm-12 col-md-12 col-lg-12 gray">
+      <h2>Projects</h2>
+    </div>
+  </div>
+
+  <!-- education -->
+  <div class="row">
+    <div id="education" class="col-sm-12 col-md-12 col-lg-12 gray">
+      <h2>Education</h2>
+    </div>
+  </div>
+
+  <!-- google map -->
+  <div class="row">
+    <div id="mapDiv">
+      <h2>Where I've Lived and Worked</h2>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="row">
+    <div id="lets-connect" class="col-sm-12 col-md-12 col-lg-12 light-green">
+      <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </footer>
+
+</div>
+
+
+
+<!--   <div id="main">
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
+      <div id="aboutMe"></div>
+      <ul id="mySkills" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
@@ -65,7 +122,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
   https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
@@ -87,6 +144,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   you can't accomplish with vanilla (regular) JavaScript.
   -->
   <script src="js/jQuery.js"></script>
+
+  <!--  -->
+
+<!--   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script -->>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>

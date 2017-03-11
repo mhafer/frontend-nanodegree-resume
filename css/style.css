@@ -11,7 +11,8 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: black;
 }
 
 .clear-fix {
@@ -25,22 +26,21 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
+  font-size: 50px;
+  color: #00688b;
   line-height: 48px;
   display: inline;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
-  color: #999;
+  font-size: 36px;
+  color: #00688b;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -61,7 +61,6 @@ h5 {
 
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -80,36 +79,50 @@ h5 {
 }
 
 p {
-  font-size: 14px;
-  color: #333;
+  font-size: 15px;
+  color: black;
   line-height: 21px;
 }
 
 a {
   color: #1199c3;
+  font-size: 15px;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
+.subHeader{
   font-size: 18px;
-  color: #f3f3f3;
+}
+
+.welcome-message {
+  font-size: 16px;
   line-height: 28px;
+  overflow: hidden;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #ff8c00;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #ff8c00;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+.dark-grey-text{
+  color: #a1a1a1;
+}
+
+.darker-grey-text{
+  color: #838b8b;
+  font-weight: bold;
 }
 
 .white-text {
@@ -123,13 +136,13 @@ a {
   clear: both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.light-green {
+  background-color: #F6F9ED;
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+header{
+  background-color: #f6f9ed;
 }
 
 .flex-box {
@@ -144,7 +157,7 @@ a {
 .flex-column {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -152,19 +165,30 @@ a {
   padding: 2.5% 5%;
 }
 
+.CattoBorderRadius
+{
+    border-radius: 100px;
+}
 ul {
   list-style-type: none;
 }
 
+ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .biopic {
-  float: left;
+  margin: 0 auto;
   padding: 10px;
   width: 200px;
   display: none;
 }
 
 img {
-  padding: 10px;
+ 
 }
 
 span {
@@ -196,9 +220,9 @@ span {
   .biopic {
     width: 150px;
   }
-  .welcome-message {
+/*  .welcome-message {
     display: none;
-  }
+  }*/
 }
 
 #map {
@@ -213,8 +237,10 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
+@media only screen and (min-width: 360px) {
+  .intro-section,
+  .skill-section,
+   #skills-h3,
   .biopic {
     display: block;
   }
