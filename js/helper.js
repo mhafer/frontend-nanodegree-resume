@@ -1,17 +1,3 @@
-/*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="subHeader flex-column">%data%</span><hr>';
 
@@ -23,15 +9,13 @@ var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="darker-grey-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="darker-grey-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic img-responsive CattoBorderRadius">';
-var HTMLwelcomeMsg = '<span class="welcome-message dark-grey-text">%data%</span>';
+var HTMLbioPic = '<img src="%data%" class="biopic img-responsive circle-border">';
+var HTMLwelcomeMsg = '<span class="welcome-message ">%data%</span>';
 
 var HTMLskillsStart = '<ul id="skills" class="flex-column"><li class="flex-item"><h3 id="skills-h3">%category%:</h3></li></ul>';
-var HTMLskills = '<li class="flex-item"><span class="dark-grey-text">%data%</span></li>';
-
+var HTMLskills = '<li class="flex-item"><span">%data%</span></li>';
 var HTMLframeworksStart = '<ul id="frameworks" class="flex-column"><li class="flex-item"><span class="white-text"><h3 id="skills-h3">Frameworks:</h3></span></li></ul>';
 var HTMLframeworks = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-
 var HTMLotherStart = '<ul id="other-skills" class="flex-column"><li class="flex-item"><span class="white-text"><h3 id="skills-h3">Others:</h3></span></li></ul>';
 var HTMLother = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
@@ -43,70 +27,42 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLProjectImagePlaceholder = '<div class="row flex-box"><div id="img0" class="col-sm-4 col-md-4 col-lg-4 gray"></div><div id="img1" class="col-sm-4 col-md-4 col-lg-4 gray"></div><div id="img2" class="col-sm-4 col-md-4 col-lg-4 gray"></div></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" height="250px" width="375px">';
+var HTMLprojectImage = '<a href="#"><img src="%data%" class="project-img img-responsive"></a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolDate = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<br>Major: %data%';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<br><br><h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
+var HTMLfooterLinkedIn = '<li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>';
+var HTMLfooterEmail ='<li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>'; 
+var HTMLfooterGitHub = ' <li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>';
+
+var HTMLCopyWriteText ='<p>Copyright© 2017 Developed By <span class="fancy-text">by </span><span class="signature-text"><a href="#" target="_blank" title="%title%">%data%</a></span><p>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-
-/*
-The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
+/* 
+Google Map
 */
-$(document).ready(function() {
-  $('button').click(function() {
-    var $name = $('#name');
-    var iName = inName($name.text()) || function(){};
-    $name.html(iName);
-  });
-});
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.
-*/
-var clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  // your code goes here!
-});
-
-
-
-/*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
-*/
 var map;    // declares a global map variable
 
-
 /*
-Start here! initializeMap() is called when page is loaded.
+initializeMap() is called when page is loaded.
 */
 function initializeMap() {
 
@@ -133,22 +89,22 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    locations.push(bio.contact.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
-      locations.push(school.location);
-    });
+     education.schools.forEach(function(school){
+       locations.push(school.location);
+     });
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.jobs.forEach(function(job){
-      locations.push(job.location);
+    work.employers.forEach(function(job){
+      locations.push(employers.location);
     });
 
     return locations;
@@ -240,16 +196,12 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+//Calls the initializeMap() function when the page loads
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+//  Make sure the map bounds get updated on page resize
+ map.fitBounds(mapBounds);
+});

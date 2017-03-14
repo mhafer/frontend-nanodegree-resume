@@ -13,6 +13,25 @@ h6 {
   margin: 0;
   font-family: "Open Sans Condensed", sans-serif;
   color: black;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  max-width: 1260px;
+}
+
+.row {
+  margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    vertical-align: bottom;
+    margin: 0;
 }
 
 .clear-fix {
@@ -79,14 +98,15 @@ h5 {
 }
 
 p {
-  font-size: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
   color: black;
   line-height: 21px;
 }
 
 a {
   color: #1199c3;
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -97,13 +117,15 @@ a {
 }
 
 .welcome-message {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   overflow: hidden;
 }
 
 #skills-h3 {
   color: #ff8c00;
+  font-size: 16px;
+  font-weight: bold;
   display: none;
 }
 
@@ -125,11 +147,6 @@ a {
   font-weight: bold;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
@@ -142,7 +159,38 @@ a {
 
 /* TODO: Replace with image later */
 header{
-  background-color: #f6f9ed;
+  background-image:
+  linear-gradient(
+      #fffaf0, #b3b090
+    );
+}
+
+  /*background-color: #EEF3E2;*/
+
+#header {
+  background-color: #EBECE4;
+  padding: 30px 30px 0;
+}
+
+#education {
+  background-color: #fff;
+  padding: 50px 0 50px 0;
+}
+
+#projects {
+  padding: 50px 0 50px 0;
+}
+
+#workExperience {
+  padding: 50px 0 50px 0;
+}
+
+#aboutMe{
+
+}
+
+.skill-section{
+  /*background-color: #ECF1EF;*/
 }
 
 .flex-box {
@@ -151,7 +199,7 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px;
 }
 
 .flex-column {
@@ -165,9 +213,8 @@ header{
   padding: 2.5% 5%;
 }
 
-.CattoBorderRadius
-{
-    border-radius: 100px;
+.circle-border {
+  border-radius: 100px;
 }
 ul {
   list-style-type: none;
@@ -178,6 +225,7 @@ ul > li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 1.4;
 }
 
 .biopic {
@@ -187,8 +235,9 @@ ul > li {
   display: none;
 }
 
-img {
- 
+.project-img {
+  display: inline;
+  border: 1px solid #021a40;
 }
 
 span {
@@ -197,44 +246,41 @@ span {
 
 #lets-connect {
   text-align: center;
+  padding: 0;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
+/*  #lets-connect {
     margin-top: 5%;
-  }
+  }*/
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
+  .container {
+    width: 90%
   }
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
+  /*#lets-connect {
     margin-top: 10%;
-  }
+  }*/
   .biopic {
     width: 150px;
   }
-/*  .welcome-message {
-    display: none;
-  }*/
 }
 
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding: 0 0 100px 0;
 }
 
 @media only screen and (min-width: 360px) {
@@ -245,3 +291,55 @@ span {
     display: block;
   }
 }
+
+footer {
+  background-color: #ebece4;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+footer ul {
+  padding-left: 0;
+  
+}
+
+footer li {
+  display: inline-block;
+  padding: 10px 0 10px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #333;
+  padding: 1.5;
+  font-size: 24px;
+}
+
+[class*="fontawesome-"]:before {
+  display: inline-block;
+  font-family: "fontawesome", sans-serif;
+  width: 5em;
+}
+
+.copyright {
+  font-size: 12px;
+  display: inline;
+}
+
+.copyright a {
+  display: inline;
+  font-weight: bold;
+}
+
+.fancy-text {
+  font-family: "Pacifico", sans-serif;
+  font-size: 16px;
+}
+
+.signature-text a {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  opacity: 0.7;
+  }
+
+
