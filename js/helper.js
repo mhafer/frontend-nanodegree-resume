@@ -1,5 +1,5 @@
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="subHeader flex-column">%data%</span><hr>';
+var HTMLheaderName = '<div class="bounceInLeft animated"><h1>%data%</h1></div>';
+var HTMLheaderRole = '<span class="subHeader flex-column bounceInLeft animated">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="darker-grey-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="darker-grey-text">%data%</span></li>';
@@ -78,7 +78,6 @@ function initializeMap() {
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
-
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
@@ -91,21 +90,15 @@ function initializeMap() {
     // adds the single location property from bio to the locations array
     locations.push(bio.contact.location);
 
-    // iterates through school locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-     education.schools.forEach(function(school){
-       locations.push(school.location);
-     });
+    // iterates through school and work locations and appends each location to the locations array
+  
+     for(e in education.schools){
+      locations.push(education.schools[e].location);
+     }
 
-    // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.employers.forEach(function(job){
-      locations.push(employers.location);
-    });
+    for(jobs in work.employers){
+      locations.push(work.employers[jobs].location);
+    }
 
     return locations;
   }
@@ -137,12 +130,13 @@ function initializeMap() {
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
+   //show more on click
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.setContent("<h3>" + marker.title + "</h3>");
+      infoWindow.open(map, marker);
     });
 
-    // this is where the pin actually gets added to the map.
+    // pin gets added to the map.
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker

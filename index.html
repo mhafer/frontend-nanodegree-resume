@@ -1,222 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hafer Resume</title>
   <!-- icon font awesome -->
   <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Source+Sans+Pro|Pacifico|Lato:100,300" rel="stylesheet">
-  <!-- icon font awesome -->
-  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Source+Sans+Pro|Pacifico|Lato:100,300">
   <!-- bootstrap CSS reference -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- Google maps -->
+  <!-- animate CSS reference -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- my custom CSS reference. -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- load JavaScript references -->
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
-  <script src="js/bootstap.min.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBO_SYPTezs9Tn8SHqnAKEn6PDuHkf904U
-  "></script>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Google maps -->
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBO_SYPTezs9Tn8SHqnAKEn6PDuHkf904U"></script>
 </head>
 <body>
 <div class="container">
-
-  <!-- headliner -->
+  <!-- website headline -->
   <header>
     <div class="row">
-      <div  id="header" class="col-sm-12 col-md-12 col-lg-12 left-text">
-        <!-- data -->
+      <div  id="header" class="col-sm-12 col-md-12 col-lg-12">
       </div>
     </div>
+    <!-- my contact info -->
     <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12">
-         <ul id="topContacts" class="flex-box"></ul>
+      <div id="animatedContact" class="col-sm-12 col-md-12 col-lg-12 wow fadeIn animated">
+         <ul id="topContacts" class="flex-box wow bounce animated"></ul>
       </div>
     </div>
-    <!-- intro -->
+    <!-- image and intro -->
     <div class="row intro-section">
       <div id="myPic" class="col-sm-4 col-md-3 col-lg-3 col-md-offset-2 col-lg-offset-2">
-      <!-- data -->
       </div>
       <div id="aboutMe" class="col-sm-8 col-md-7 col-lg-4 center-content">
-      <!-- data -->
       </div>
     </div>
     <!-- skills -->
-    <div class="row skill-section">
+    <div class="row skill-section wow bounce animated">
       <div id="skillsTitle" class="col-sm-12 col-md-12 col-lg-12">
-        <!-- data -->
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
         <ul id="mySkills" class="flex-box"></ul>
-        <!-- data -->
       </div>
     </div>
   </header>
-
   <!-- Work Experience -->
-  <div class="row" style="clear: both;">
+  <div class="row" >
     <div id="workExperience" class="col-sm-12 col-md-12 col-lg-12">
       <h2>Work Experience</h2>
-      <!-- data -->
     </div>
   </div>
-
   <!-- Projects -->
   <div class="row">
      <div id="projects" class="col-sm-12 col-md-12 col-lg-12 gray">
       <h2>Projects</h2>
     </div>
   </div>
-
-  <!-- education -->
+  <!-- Education -->
   <div class="row">
-    <div id="education" class="col-sm-12 col-md-12 col-lg-12 gray">
+    <div id="education" class="col-sm-12 col-md-12 col-lg-12">
       <h2>Education</h2>
     </div>
   </div>
-
-  <!-- google map -->
+  <!-- Google map -->
   <div class="row">
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
   </div>
-
   <!-- footer -->
   <footer class="row">
     <div id="lets-connect" class="col-sm-12 col-md-12 col-lg-12">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-        </ul>
-        <div class="copyright">
-        </div>
-      <!-- copyright line -->
-        <!-- <p class="copyright">Copyright© 2017 Developed By -->
-        <!--   <span class="fancy-text">by </span>
-          <span class="signature-text">
-            <a href="http://www.michellesalema.com"  target="_blank" title="Michelle's Previous Website">Michelle Hafer</a>
-           </span>
-        </p> -->
+        <h2 class="orange">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box"></ul>
+        <div class="copyright"></div>
     </div>
   </footer>
-
 </div>
-
-
-
-<!--   <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-      <div id="aboutMe"></div>
-      <ul id="mySkills" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div> -->
-
-  <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
-  https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
-
-   <!-- "Javascript assets, by default, tend to block any other parallel downloads from occurring. So, you can imagine if you have plenty of <script> tags in the head, calling on multiple external scripts will block the HTML from loading, thus greeting the user with a blank white screen, because no other content on your page will load until the JS files have completely loaded."
-    http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
-
-    <!--
-  jQuery is a common JavaScript library for reading and making changes to the
-  Document Object Model (DOM). The DOM is a tree that contains information
-  about what is actually visible on a website.
-
-  While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
-  -->
-  <script src="js/jQuery.js"></script>
-
-  <!--  -->
-
-<!--   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script -->>
-
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
-
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
-  <script src="js/resumeBuilder.js"></script>
-
-
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
-  <script>
-    // Notice how all of a sudden there's JavaScript inside this HTML
-    // document? You can write JavaScript between <script> tags. At the end of your
-    // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-    //   two slashes for all following characters on a single line, or
-
-    /*
-        an opening and closing set of slash asterisks for block comments.
-    */
-
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
+ <!-- load JavaScript page references -->
+<script src="js/helper.js"></script>
+<script src="js/resumeBuilder.js"></script>
+<script>
+  if(document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('topContacts').style.display = 'none';
+  }
+  if(document.getElementsByTagName('h1').length === 0) {
+    document.getElementById('header').style.display = 'none';
+  }
+  if(document.getElementsByClassName('work-entry').length === 0) {
+    document.getElementById('workExperience').style.display = 'none';
+  }
+  if(document.getElementsByClassName('project-entry').length === 0) {
+    document.getElementById('projects').style.display = 'none';
+  }
+  if(document.getElementsByClassName('education-entry').length === 0) {
+    document.getElementById('education').style.display = 'none';
+  }
+  if(document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('lets-connect').style.display = 'none';
+  }
+  if(document.getElementById('map') === null) {
+    document.getElementById('mapDiv').style.display = 'none';
+  }
+</script>
 </body>
 </html>

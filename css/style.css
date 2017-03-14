@@ -97,6 +97,46 @@ h5 {
 
 }
 
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+.circle-border {
+  border-radius: 100px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+
+span {
+  padding: 5px;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -110,23 +150,6 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
-}
-
-.subHeader{
-  font-size: 18px;
-}
-
-.welcome-message {
-  font-size: 18px;
-  line-height: 28px;
-  overflow: hidden;
-}
-
-#skills-h3 {
-  color: #ff8c00;
-  font-size: 16px;
-  font-weight: bold;
-  display: none;
 }
 
 .orange {
@@ -154,10 +177,9 @@ a {
 }
 
 .light-green {
-  background-color: #F6F9ED;
+  background-color: #f6f9ed;
 }
 
-/* TODO: Replace with image later */
 header{
   background-image:
   linear-gradient(
@@ -165,67 +187,13 @@ header{
     );
 }
 
-  /*background-color: #EEF3E2;*/
-
 #header {
-  background-color: #EBECE4;
+  background-color: #ebece4;
   padding: 30px 30px 0;
 }
 
-#education {
-  background-color: #fff;
-  padding: 50px 0 50px 0;
-}
-
-#projects {
-  padding: 50px 0 50px 0;
-}
-
-#workExperience {
-  padding: 50px 0 50px 0;
-}
-
-#aboutMe{
-
-}
-
-.skill-section{
-  /*background-color: #ECF1EF;*/
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-.circle-border {
-  border-radius: 100px;
-}
-ul {
-  list-style-type: none;
-}
-
-ul > li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.4;
+.subHeader{
+  font-size: 18px;
 }
 
 .biopic {
@@ -235,41 +203,28 @@ ul > li {
   display: none;
 }
 
+.welcome-message {
+  font-size: 18px;
+  line-height: 28px;
+  overflow: hidden;
+}
+
+#skills-h3 {
+  color: #ff8c00;
+  font-size: 16px;
+  font-weight: bold;
+  display: none;
+}
+
+#workExperience,
+#projects,
+#education {
+  padding: 50px 0 50px 0;
+}
+
 .project-img {
   display: inline;
   border: 1px solid #021a40;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-  padding: 0;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-/*  #lets-connect {
-    margin-top: 5%;
-  }*/
-}
-
-@media only screen and (max-width:900px) {
-  .container {
-    width: 90%
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  /*#lets-connect {
-    margin-top: 10%;
-  }*/
-  .biopic {
-    width: 150px;
-  }
 }
 
 #map {
@@ -283,25 +238,18 @@ span {
   padding: 0 0 100px 0;
 }
 
-@media only screen and (min-width: 360px) {
-  .intro-section,
-  .skill-section,
-   #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
-
 footer {
   background-color: #ebece4;
   text-align: center;
   padding-bottom: 50px;
 }
 
-footer ul {
-  padding-left: 0;
-  
+#lets-connect {
+  text-align: center;
+  padding: 0;
 }
+
+/*  everything used within the footer */
 
 footer li {
   display: inline-block;
@@ -342,4 +290,39 @@ footer li {
   opacity: 0.7;
   }
 
+/* Handles animation adjustments */
 
+#animatedContact{
+  -webkit-animation-duration: 2s;
+}
+
+#topContacts{
+  -webkit-animation-delay: 1s;
+}
+
+.skill-section{
+  -webkit-animation-delay: 1s;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width:900px) {
+  .container {
+    width: 90%
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .biopic {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .intro-section,
+  .skill-section,
+   #skills-h3,
+  .biopic {
+    display: block;
+  }
+}

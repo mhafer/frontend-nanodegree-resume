@@ -22,21 +22,20 @@ var work = {
 			"name":"Xccepted Technologies Inc",
 			"position":"Software Developer",
 			"date":"February 2016 - January 2017",
-			"location":"Vancouver",
+			"location":"Surry, BC",
 			"description":"Designed and programmed an Android app to be used in conjunction with our company's devices.  Also engineered devices to work on Arduino and raspberry Pi. Implemented innovative systems for data collection, storage, and management of customer data",
 			"link":"http://xccepted.com"
 		},
 		{
 			"name":"Energy Fitness & Yoga",
 			"position":"Social Media Marketer & Administrations Manager",
-			"location":"Vancouver",
+			"location":"Vancouver, BC",
 			"date":"January 2015 - March 2016",
 			"description":"Implemented SEO strategies, and Google analytics to increase membership enrollment. Maintained website, social media outlets, and created the monthly member emails. Helped in directing the hiring, training and performance evaluations for staff and supervised their daily activities.",
 			"link":""
 		}	
 	]
 };
-
 
 var projects = {
 	"project": [
@@ -50,7 +49,7 @@ var projects = {
 		{
 			"title":"Website Work",
 			"date":"December 2016",
-			"description":"Created Inked Cosmetic's website building on a Bootstrap 1 page template. I personalized the website to the client's needs, adding multiple pages, contact information, and personal design preferences",
+			"description":"The following are examples of some website work that I have done in the past. Originally, these are based on a simple, open source template. I personalize the website to the client's needs, adding multple pages, more functionality, contact forms, improving user experience, and of course changing the design to the client's own personal taste.",
 			"image":["images/xcceptedwebsite.png","images/inkedwebsite.png","images/weddingwebsite.png"],
 			"link":["http://xccepted.com/","http://inkedcosmetic.ca/","http://thehaferfamily.com"],
 		},		
@@ -63,7 +62,6 @@ var projects = {
 		}
 	]
 };
-
 
 var education = {
 	"schools": [
@@ -99,6 +97,26 @@ var education = {
 		}
 	]
 };
+
+var footer = {
+	"contacts": [
+		{
+			"name": "Michelle's LinkedIn",
+			"link": "https://www.linkedin.com/in/michellesalema",
+			"code": "linkedin"
+		},
+		{
+			"name": "mhaf3r@gmail.com",
+			"link": "mailto:missmichellesalema@gmail.com",
+			"code": "envelope"
+		},
+		{
+			"name": "Michelle's Git Hub",
+			"link": "https://github.com/mhafer",
+			"code": "github"
+		}
+	]
+}
 
 bio.display = function(){
 
@@ -150,7 +168,6 @@ bio.display = function(){
 	}	
 }
 
-
 work.display = function(){
 
 	for(jobs in work.employers){
@@ -163,12 +180,13 @@ work.display = function(){
 		$(".work-entry:last").append(formattedEmployerTitle);
 		var formattedDates = HTMLworkDates.replace("%data%", work.employers[jobs].date);
 		$(".work-entry:last").append(formattedDates);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.employers[jobs].location);
+		$(".work-entry:last").append(formattedLocation);
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.employers[jobs].description);
 		$(".work-entry:last").append(formattedDescription);
 	}	
 
 }
-
 
 projects.display = function(){
 	
@@ -220,7 +238,6 @@ education.display = function(){
 			$(".education-entry").append(formattedSchoolDate);
 			$(".education-entry").append(formattedLocation);
 			$(".education-entry").append(formattedMajor);
-
 		}
 
 	$(".education-entry").append(HTMLonlineClasses);	
@@ -236,29 +253,7 @@ education.display = function(){
 			$(".education-entry").append(formattedSchoolDate);
 
 		}
-
 }
-
-var footer = {
-	"contacts": [
-		{
-			"name": "Michelle's LinkedIn",
-			"link": "https://www.linkedin.com/in/michellesalema",
-			"code": "linkedin"
-		},
-		{
-			"name": "mhaf3r@gmail.com",
-			"link": "mailto:missmichellesalema@gmail.com",
-			"code": "envelope"
-		},
-		{
-			"name": "Michelle's Git Hub",
-			"link": "https://github.com/mhafer",
-			"code": "github"
-		}
-	]
-}
-
 
 function setUpFooter(){
 
