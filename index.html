@@ -1,114 +1,117 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hafer Resume</title>
-  <!-- icon font awesome -->
-  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
-  <!-- Google fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Source+Sans+Pro|Pacifico|Lato:100,300">
-  <!-- bootstrap CSS reference -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- animate CSS reference -->
-  <link rel="stylesheet" href="css/animate.css">
-  <!-- my custom CSS reference. -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- load JavaScript references -->
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Google maps -->
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBO_SYPTezs9Tn8SHqnAKEn6PDuHkf904U"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hafer Resume</title>
+    <!-- icon font awesome -->
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Source+Sans+Pro|Pacifico|Lato:100,300">
+    <!-- bootstrap CSS reference -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS reference -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- my custom CSS reference. -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- load JavaScript references -->
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Google maps -->
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBO_SYPTezs9Tn8SHqnAKEn6PDuHkf904U"></script>
 </head>
+
 <body>
-<div class="container">
-  <!-- website headline -->
-  <header>
-    <div class="row">
-      <div  id="header" class="col-sm-12 col-md-12 col-lg-12">
-      </div>
+    <div class="container">
+        <!-- website headline -->
+        <header>
+            <div class="row">
+                <div id="header" class="col-sm-12 col-md-12 col-lg-12">
+                </div>
+            </div>
+            <!-- my contact info -->
+            <div class="row">
+                <div id="animatedContact" class="col-sm-12 col-md-12 col-lg-12 wow fadeIn animated">
+                    <ul id="topContacts" class="flex-box wow bounce animated"></ul>
+                </div>
+            </div>
+            <!-- image and intro -->
+            <div class="row intro-section">
+                <div id="myPic" class="col-sm-4 col-md-3 col-lg-3 col-md-offset-2 col-lg-offset-2">
+                </div>
+                <div id="aboutMe" class="col-sm-8 col-md-7 col-lg-4 center-content">
+                </div>
+            </div>
+            <!-- skills -->
+            <div class="row skill-section wow bounce animated">
+                <div id="skillsTitle" class="col-sm-12 col-md-12 col-lg-12">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <ul id="mySkills" class="flex-box"></ul>
+                </div>
+            </div>
+        </header>
+        <!-- Work Experience -->
+        <div class="row">
+            <div id="workExperience" class="col-sm-12 col-md-12 col-lg-12">
+                <h2>Work Experience</h2>
+            </div>
+        </div>
+        <!-- Projects -->
+        <div class="row">
+            <div id="projects" class="col-sm-12 col-md-12 col-lg-12 gray">
+                <h2>Projects</h2>
+            </div>
+        </div>
+        <!-- Education -->
+        <div class="row">
+            <div id="education" class="col-sm-12 col-md-12 col-lg-12">
+                <h2>Education</h2>
+            </div>
+        </div>
+        <!-- Google map -->
+        <div class="row">
+            <div id="mapDiv">
+                <h2>Where I've Lived and Worked</h2>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="row">
+            <div id="lets-connect" class="col-sm-12 col-md-12 col-lg-12">
+                <h2 class="orange">Let's Connect</h2>
+                <ul id="footerContacts" class="flex-box"></ul>
+                <div class="copyright"></div>
+            </div>
+        </footer>
     </div>
-    <!-- my contact info -->
-    <div class="row">
-      <div id="animatedContact" class="col-sm-12 col-md-12 col-lg-12 wow fadeIn animated">
-         <ul id="topContacts" class="flex-box wow bounce animated"></ul>
-      </div>
-    </div>
-    <!-- image and intro -->
-    <div class="row intro-section">
-      <div id="myPic" class="col-sm-4 col-md-3 col-lg-3 col-md-offset-2 col-lg-offset-2">
-      </div>
-      <div id="aboutMe" class="col-sm-8 col-md-7 col-lg-4 center-content">
-      </div>
-    </div>
-    <!-- skills -->
-    <div class="row skill-section wow bounce animated">
-      <div id="skillsTitle" class="col-sm-12 col-md-12 col-lg-12">
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-12">
-        <ul id="mySkills" class="flex-box"></ul>
-      </div>
-    </div>
-  </header>
-  <!-- Work Experience -->
-  <div class="row" >
-    <div id="workExperience" class="col-sm-12 col-md-12 col-lg-12">
-      <h2>Work Experience</h2>
-    </div>
-  </div>
-  <!-- Projects -->
-  <div class="row">
-     <div id="projects" class="col-sm-12 col-md-12 col-lg-12 gray">
-      <h2>Projects</h2>
-    </div>
-  </div>
-  <!-- Education -->
-  <div class="row">
-    <div id="education" class="col-sm-12 col-md-12 col-lg-12">
-      <h2>Education</h2>
-    </div>
-  </div>
-  <!-- Google map -->
-  <div class="row">
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-  </div>
-  <!-- footer -->
-  <footer class="row">
-    <div id="lets-connect" class="col-sm-12 col-md-12 col-lg-12">
-        <h2 class="orange">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box"></ul>
-        <div class="copyright"></div>
-    </div>
-  </footer>
-</div>
- <!-- load JavaScript page references -->
-<script src="js/helper.js"></script>
-<script src="js/resumeBuilder.js"></script>
-<script>
-  if(document.getElementsByClassName('flex-item').length === 0) {
-    document.getElementById('topContacts').style.display = 'none';
-  }
-  if(document.getElementsByTagName('h1').length === 0) {
-    document.getElementById('header').style.display = 'none';
-  }
-  if(document.getElementsByClassName('work-entry').length === 0) {
-    document.getElementById('workExperience').style.display = 'none';
-  }
-  if(document.getElementsByClassName('project-entry').length === 0) {
-    document.getElementById('projects').style.display = 'none';
-  }
-  if(document.getElementsByClassName('education-entry').length === 0) {
-    document.getElementById('education').style.display = 'none';
-  }
-  if(document.getElementsByClassName('flex-item').length === 0) {
-    document.getElementById('lets-connect').style.display = 'none';
-  }
-  if(document.getElementById('map') === null) {
-    document.getElementById('mapDiv').style.display = 'none';
-  }
-</script>
+    <!-- load JavaScript page references -->
+    <script src="js/helper.js"></script>
+    <script src="js/resumeBuilder.js"></script>
+    <script>
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>

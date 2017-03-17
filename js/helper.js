@@ -88,19 +88,19 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contact.location);
+    locations.push(bio.contacts.location);
 
     // iterates through school and work locations and appends each location to the locations array
-  
-     for(e in education.schools){
-      locations.push(education.schools[e].location);
-     }
 
-    for(jobs in work.employers){
-      locations.push(work.employers[jobs].location);
-    }
+    education.schools.forEach(function(school) {
+      locations.push(school.location);
+    });
 
-    return locations;
+     work.jobs.forEach(function(job) {
+      locations.push(job.location);
+     });
+     
+      return locations;
   }
 
   /*

@@ -1,13 +1,13 @@
 var bio = {
 	"name": "Michelle",
 	"role": "Web Developer",
-	"contact": {
-		"phone":"410-297-1178",
+	"contacts": {
+		"mobile":"410-297-1178",
 		"email":"mhaf3r@gmail.com",
 		"github": "mhafer",
 		"location": "Baltimore, MD"
 	},
-	"image": "images/me.jpg",
+	"biopic": "images/me.jpg",
 	"welcomeMessage": "Results-oriented software programmer, both professionally educated and self-taught. Promotes object-oriented approaches to real-time software development. Analytical and detail-oriented. Enjoys working in a collaborative and supportive team environment.",
 	"skills": {
 		"Languages":["Java","C#","MySQL","HTML5","CSS","JavaScript","PHP"],
@@ -17,20 +17,20 @@ var bio = {
 };
 
 var work = {
-	"employers": [
+	"jobs": [
 		{
-			"name":"Xccepted Technologies Inc",
-			"position":"Software Developer",
-			"date":"February 2016 - January 2017",
+			"employer":"Xccepted Technologies Inc",
+			"title":"Software Developer",
 			"location":"Surry, BC",
+			"dates":"February 2016 - January 2017",
 			"description":"Designed and programmed an Android app to be used in conjunction with our company's devices.  Also engineered devices to work on Arduino and raspberry Pi. Implemented innovative systems for data collection, storage, and management of customer data",
 			"link":"http://xccepted.com"
 		},
 		{
-			"name":"Energy Fitness & Yoga",
-			"position":"Social Media Marketer & Administrations Manager",
+			"employer":"Energy Fitness & Yoga",
+			"title":"Social Media Marketer & Administrations Manager",
 			"location":"Vancouver, BC",
-			"date":"January 2015 - March 2016",
+			"dates":"January 2015 - March 2016",
 			"description":"Implemented SEO strategies, and Google analytics to increase membership enrollment. Maintained website, social media outlets, and created the monthly member emails. Helped in directing the hiring, training and performance evaluations for staff and supervised their daily activities.",
 			"link":""
 		}	
@@ -38,26 +38,26 @@ var work = {
 };
 
 var projects = {
-	"project": [
+	"projects": [
 		{
 			"title":"Vanpedia",
-			"date":"March 2016",
+			"dates":"March 2016",
 			"description":"Designed, coded, and tested a tourism app designed for Vancouver. The app allows the user to search for near-by places and activities by category. It also featured recommended spots, weather, and information about the city. One of the stand out features was the ability to 'star' and save places to your own personal list, as well as the ability to contact the place and get directions with the implementation of google maps API",
-			"image":["images/vanpedia.png"],
+			"images":["images/vanpedia.png"],
 			"link":["https://github.com/dems-mobile/vanpedia"]
 		},
 		{
 			"title":"Website Work",
-			"date":"December 2016",
+			"dates":"December 2016",
 			"description":"The following are examples of some website work that I have done in the past. Originally, these are based on a simple, open source template. I personalize the website to the client's needs, adding multple pages, more functionality, contact forms, improving user experience, and of course changing the design to the client's own personal taste.",
-			"image":["images/xcceptedwebsite.png","images/inkedwebsite.png","images/weddingwebsite.png"],
+			"images":["images/xcceptedwebsite.png","images/inkedwebsite.png","images/weddingwebsite.png"],
 			"link":["http://xccepted.com/","http://inkedcosmetic.ca/","http://thehaferfamily.com"],
 		},		
 		{
 			"title":"Portfolio Builder",
-			"date":"February 2017",
+			"dates":"February 2017",
 			"description":"Developed a responsive website that displays images, descriptions, and links to each of the portfolio projects I will be completing throughout my Nanodegree program.",
-			"image":["images/personalwebsite.png"],
+			"images":["images/personalwebsite.png"],
 			"link":["https://github.com/mhafer/Udacity-FrontEnd-Nanodegree/tree/master/build-a-portfolio-site"]
 		}
 	]
@@ -68,31 +68,31 @@ var education = {
 		{
 			"name": "Douglas College",
 			"location":"New Westminster, BC",
-			"date":"May 2014 - June 2016",
-			"major":"Computer Science",
 			"degree":"Associates",
+			"majors":"Computer Science",
+			"dates":"May 2014 - June 2016",
 			"url":"https://www.douglascollege.ca/"
 		},
 		{
 			"name":"University of Victoria",
 			"location":"Victoria, BC",
-			"date": "September 2006 - June 2009",
-			"major":"Business",	
 			"degree":"3rd Year",
+			"majors":"Business",
+			"dates": "September 2006 - June 2009",
 			"url":"http://www.uvic.ca/"
 		}
 	],
 	"online":[
 		{
-			"name":"Udacity",
 			"title":"Front End Web Developer",
-			"date":"current",
+			"school":"Udacity",
+			"dates":"current",
 			"url":"https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 		},
-		{
-			"name":"Udemy",
+		{	
 			"title":"Introduction to Data Structures & Algorithms in Java",
-			"date":"January 2016",
+			"school":"Udemy",			
+			"dates":"January 2016",
 			"url":"https://www.udemy.com/certificate/UC-1COZPSJ5/"
 		}
 	]
@@ -122,11 +122,11 @@ bio.display = function(){
 
 	var formattedName = HTMLheaderName.replace("%data%", "Michelle Hafer");
 	var formattedRole = HTMLheaderRole.replace("%data%", "Software Developer");
-	var formattedMobile = HTMLmobile.replace("%data%", bio.contact.phone);
-	var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
-	var formattedGithub = HTMLgithub.replace("%data%", bio.contact.github);
-	var formattedLocation = HTMLlocation.replace("%data%", bio.contact.location);
-	var formattedBioPic = HTMLbioPic.replace("%data%", bio.image);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
@@ -165,24 +165,25 @@ bio.display = function(){
 				$("#other-skills").append(formattedSkills);
 			}			
 		}
-	}	
+	}
 }
+
 
 work.display = function(){
 
-	for(jobs in work.employers){
+	for(var i = 0; i < work.jobs.length; i++){
 	
 		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.employers[jobs].name);
-		var formattedEmployerLink = formattedEmployer.replace("#", work.employers[jobs].link);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.employers[jobs].position);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+		var formattedEmployerLink = formattedEmployer.replace("#", work.jobs[i].link);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
 		var formattedEmployerTitle = formattedEmployerLink + " " + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
-		var formattedDates = HTMLworkDates.replace("%data%", work.employers[jobs].date);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
 		$(".work-entry:last").append(formattedDates);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.employers[jobs].location);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
 		$(".work-entry:last").append(formattedLocation);
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.employers[jobs].description);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 		$(".work-entry:last").append(formattedDescription);
 	}	
 
@@ -191,18 +192,18 @@ work.display = function(){
 projects.display = function(){
 	
 $("#projects").append(HTMLprojectStart);
-	
-	for(p in projects.project){
 
-		var img = projects.project[p].image;
-		var links = projects.project[p].link;
+	for(var i = 0; i < projects.projects.length; i++){	
+
+		var img = projects.projects[i].images;
+		var links = projects.projects[i].link;
 		$(".project-entry:last").prepend(HTMLProjectImagePlaceholder);
-		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[p].description);
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 		$(".project-entry:last").prepend(formattedDescription);
-		var formattedDate = HTMLprojectDates.replace("%data%",projects.project[p].date);
+		var formattedDate = HTMLprojectDates.replace("%data%",projects.projects[i].date);
 		$(".project-entry:last").prepend(formattedDate);
-		var formattedTitleLink = HTMLprojectTitle.replace("#", projects.project[p].link[0]);
-		var formattedTitle = formattedTitleLink.replace("%data%", projects.project[p].title);
+		var formattedTitleLink = HTMLprojectTitle.replace("#", projects.projects[i].link[0]);
+		var formattedTitle = formattedTitleLink.replace("%data%", projects.projects[i].title);
 		$(".project-entry:last").prepend(formattedTitle);
 
 		if(img.length == 1){
@@ -217,24 +218,24 @@ $("#projects").append(HTMLprojectStart);
 				var formattedLink = formattedImage.replace("#", links[i]);
 				$(id).append(formattedLink);
 			}
-		}		
-	}
+		}
+	}			
 }
 
 education.display = function(){
 
 	$("#education").append(HTMLschoolStart);
 
-		for(e in education.schools){
+		for(var i = 0; i < education.schools.length; i++){
 
-			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[e].name);
-			var formattedSchoolLink = formattedSchoolName.replace("#", education.schools[e].url);
-			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[e].degree);
+			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+			var formattedSchoolLink = formattedSchoolName.replace("#", education.schools[i].url);
+			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
 			var formattedSchoolTitle = formattedSchoolLink + formattedSchoolDegree;
 			$(".education-entry").append(formattedSchoolTitle);	
-			var formattedSchoolDate = HTMLschoolDate.replace("%data%", education.schools[e].date);
-			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[e].location);
-			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[e].major);		
+			var formattedSchoolDate = HTMLschoolDate.replace("%data%", education.schools[i].dates);
+			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);		
 			$(".education-entry").append(formattedSchoolDate);
 			$(".education-entry").append(formattedLocation);
 			$(".education-entry").append(formattedMajor);
@@ -242,16 +243,15 @@ education.display = function(){
 
 	$(".education-entry").append(HTMLonlineClasses);	
 
-		for(o in education.online){
+		for(var o = 0; o < education.online.length; o++){
 
-			var formattedSchoolName = HTMLonlineSchool.replace("%data%", education.online[o].name);
+			var formattedSchoolName = HTMLonlineSchool.replace("%data%", education.online[o].school);
 			var formattedSchoolLink = HTMLonlineTitle.replace("#", education.online[o].url);
 			var formattedSchoolCourse = formattedSchoolLink.replace("%data%", education.online[o].title);
 			var formattedSchoolTitle = formattedSchoolCourse + formattedSchoolName;
-			var formattedSchoolDate = HTMLonlineDates.replace("%data%", education.online[o].date);
+			var formattedSchoolDate = HTMLonlineDates.replace("%data%", education.online[o].dates);
 			$(".education-entry").append(formattedSchoolTitle);
 			$(".education-entry").append(formattedSchoolDate);
-
 		}
 }
 
