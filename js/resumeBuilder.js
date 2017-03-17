@@ -8,12 +8,10 @@ var bio = {
 		"location": "Baltimore, MD"
 	},
 	"biopic": "images/me.jpg",
-	"welcomeMessage": "Results-oriented software programmer, both professionally educated and self-taught. Promotes object-oriented approaches to real-time software development. Analytical and detail-oriented. Enjoys working in a collaborative and supportive team environment.",
-	"skills": {
-		"Languages":["Java","C#","MySQL","HTML5","CSS","JavaScript","PHP"],
-		"Frameworks":["Bootstrap","JQuery"],
-		"Other":["Github","Android Studios","MongoDB"]
-	}
+	"welcomeMessage":"Results-oriented software programmer, both professionally educated and self-taught. Promotes object-oriented approaches to real-time software development. Analytical and detail-oriented. Enjoys working in a collaborative and supportive team environment.",
+	"skills": ["Java","C#","MySQL","HTML5","CSS","JavaScript","PHP"],
+	"frameworks": ["Bootstrap","JQuery"],
+	"other":["Github","Android Studios","MongoDB"]
 };
 
 var work = {
@@ -137,10 +135,34 @@ bio.display = function(){
 	$("#myPic").append(formattedBioPic);
 	$("#aboutMe").append(formattedWelcome);
 
+	// append added skill titles
+	var formattedSkillsStart = HTMLskillsStart.replace("%category%", "Languages"); //hardcoded in order to keep the schema the same "skills" and not "languages"
+	$("#mySkills").append(formattedSkillsStart);
+	var formattedSkillsStart = HTMLframeworksStart.replace("%category%", bio.frameworks);
+	$("#mySkills").append(formattedSkillsStart);
+	var formattedSkillsStart = HTMLotherStart.replace("%category%", bio.other);
+	$("#mySkills").append(formattedSkillsStart);
+
+	// loop through each skill and append sub-skill
+	bio.skills.forEach(function(skill){
+		var formattedSkills = HTMLskills.replace("%data%", skill);
+		$("#skills").append(formattedSkills);
+	});	
+
+	bio.frameworks.forEach(function(framework){
+		var formattedSkills = HTMLskills.replace("%data%", framework);
+		$("#frameworks").append(formattedSkills);
+	});
+
+	bio.other.forEach(function(otherSkill){
+		var formattedSkills = HTMLskills.replace("%data%", otherSkill);
+		$("#other-skills").append(formattedSkills);
+	});
+
+	 /* Keeping this code in order to uncomment after submission 
+
 	for(category in bio.skills){
-
 		var cat = category;
-
 		if(category == "Languages"){
 			var formattedSkillsStart = HTMLskillsStart.replace("%category%", category);
 			$("#mySkills").append(formattedSkillsStart);
@@ -150,8 +172,7 @@ bio.display = function(){
 		} else {
 			var formattedSkillsStart = HTMLotherStart.replace("%category%", category);
 			$("#mySkills").append(formattedSkillsStart);
-		}
-				
+		}			
 		for(skill in bio.skills[category]){
 			if(category == "Languages"){
 				var formattedSkills = HTMLskills.replace("%data%", bio.skills[category][skill]);
@@ -166,8 +187,8 @@ bio.display = function(){
 			}			
 		}
 	}
+	*/
 }
-
 
 work.display = function(){
 
@@ -186,7 +207,6 @@ work.display = function(){
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 		$(".work-entry:last").append(formattedDescription);
 	}	
-
 }
 
 projects.display = function(){
@@ -276,7 +296,6 @@ function setUpFooter(){
 	var formattedCRtitle = formattedCRlink.replace("%title%","Michelle's Previous Website");
 	var formattedCRtext = formattedCRtitle.replace("%data%","Michelle Hafer");
 	$('.copyright').append(formattedCRtext);
-
 }
 
 bio.display();
