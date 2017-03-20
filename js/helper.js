@@ -46,10 +46,7 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
-var HTMLfooterLinkedIn = '<li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>';
-var HTMLfooterEmail ='<li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>'; 
-var HTMLfooterGitHub = ' <li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>';
-
+var HTMLfooterInfo = '<li><a href="#" class="fontawesome-%class% social-link" target="_blank" title="%title%"></a></li>';
 var HTMLCopyWriteText ='<p>Copyright© 2017 Developed By <span class="fancy-text">by </span><span class="signature-text"><a href="#" target="_blank" title="%title%">%data%</a></span><p>';
 
 var internationalizeButton = '<button>Internationalize</button>';

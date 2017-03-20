@@ -49,7 +49,37 @@ var bio = {
 		});
   },
 	"frameworks": ["Bootstrap","JQuery"],
-	"other":["Github","Android Studios","MongoDB"]
+	"other":["Github","Android Studios","MongoDB"],
+	"footerContacts" : [
+		{
+			"name": "Michelle's LinkedIn",
+			"link": "https://www.linkedin.com/in/michellesalema",
+			"code": "linkedin"
+		},
+		{
+			"name": "mhaf3r@gmail.com",
+			"link": "mailto:missmichellesalema@gmail.com",
+			"code": "envelope"
+		},
+		{
+			"name": "Michelle's Git Hub",
+			"link": "https://github.com/mhafer",
+			"code": "github"
+		}
+	],
+	displayFooter : function(){
+
+		for(var i = 0; i < bio.footerContacts.length; i++){
+			var formattedFooterLink = HTMLfooterInfo.replace("#", bio.footerContacts[i].link);
+			var formattedFooterCode = formattedFooterLink.replace("%class%", bio.footerContacts[i].code);
+			var formattedFooterInfo = formattedFooterCode.replace("%title%", bio.footerContacts[i].name);
+			$("#footerContacts").append(formattedFooterInfo);
+		}
+		var formattedCRlink = HTMLCopyWriteText.replace("#","http://www.michellesalema.com");
+		var formattedCRtitle = formattedCRlink.replace("%title%","Michelle's Previous Website");
+		var formattedCRtext = formattedCRtitle.replace("%data%","Michelle Hafer");
+		$('.copyright').append(formattedCRtext);
+	}	
 };
 
 var work = {
@@ -204,47 +234,9 @@ var education = {
 	}
 };
 
-var footer = {
-	"contacts": [
-		{
-			"name": "Michelle's LinkedIn",
-			"link": "https://www.linkedin.com/in/michellesalema",
-			"code": "linkedin"
-		},
-		{
-			"name": "mhaf3r@gmail.com",
-			"link": "mailto:missmichellesalema@gmail.com",
-			"code": "envelope"
-		},
-		{
-			"name": "Michelle's Git Hub",
-			"link": "https://github.com/mhafer",
-			"code": "github"
-		}
-	],
-	display : function(){
-		var formattedLinkedInLink = HTMLfooterLinkedIn.replace("#", footer.contacts[0].link);
-		var formattedLinkedInCode = formattedLinkedInLink.replace("%class%", footer.contacts[0].code);
-		var formattedLinkedIn = formattedLinkedInCode.replace("%title%", footer.contacts[0].name);
-		$("#footerContacts").append(formattedLinkedIn);
-		var formattedEmailLink = HTMLfooterEmail.replace("#", footer.contacts[1].link);
-		var formattedEmailCode = formattedEmailLink.replace("%class%", footer.contacts[1].code);
-		var formattedEmail = formattedEmailCode.replace("%title%", footer.contacts[1].name);
-		$("#footerContacts").append(formattedEmail);
-		var formattedGitLink = HTMLfooterGitHub.replace("#", footer.contacts[2].link);
-		var formattedGitCode = formattedGitLink.replace("%class%", footer.contacts[2].code);
-		var formattedGit = formattedGitCode.replace("%title%", footer.contacts[2].name);
-		$("#footerContacts").append(formattedGit);
-		var formattedCRlink = HTMLCopyWriteText.replace("#","http://www.michellesalema.com");
-		var formattedCRtitle = formattedCRlink.replace("%title%","Michelle's Previous Website");
-		var formattedCRtext = formattedCRtitle.replace("%data%","Michelle Hafer");
-		$('.copyright').append(formattedCRtext);
-	}	
-};
-
 bio.display();
 work.display();
 projects.display();
 education.display();
-footer.display();
+bio.displayFooter();
 $("#mapDiv").append(googleMap);
