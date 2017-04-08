@@ -132,14 +132,14 @@ var projects = {
 			"title":"Website Work",
 			"dates":"December 2016",
 			"description":"The following are examples of some website work that I have done in the past. Originally, these are based on a simple, open source template. I personalize the website to the client's needs, adding multple pages, more functionality, contact forms, improving user experience, and of course changing the design to the client's own personal taste.",
-			"images":["images/xcceptedwebsite.png","images/inkedwebsite.png","images/weddingwebsite.png"],
+			"images":["images/xcceptedwebsite.jpg","images/inkedwebsite.jpg","images/weddingwebsite.jpg"],
 			"link":["http://xccepted.com/","http://inkedcosmetic.ca/","http://thehaferfamily.com"],
 		},		
 		{
 			"title":"Portfolio Builder",
 			"dates":"February 2017",
 			"description":"Developed a responsive website that displays images, descriptions, and links to each of the portfolio projects I will be completing throughout my Nanodegree program.",
-			"images":["images/personalwebsite.png"],
+			"images":["images/personalwebsite.jpg"],
 			"link":["https://github.com/mhafer/Udacity-FrontEnd-Nanodegree/tree/master/build-a-portfolio-site"]
 		}
 	],
