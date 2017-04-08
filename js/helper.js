@@ -1,3 +1,5 @@
+
+var map;    // declares a global map variable
 var HTMLheaderName = '<div class="bounceInLeft animated"><h1>%data%</h1></div>';
 var HTMLheaderRole = '<span class="subHeader flex-column bounceInLeft animated">%data%</span><hr>';
 
@@ -55,8 +57,6 @@ var googleMap = '<div id="map"></div>';
 /* 
 Google Map
 */
-
-var map;    // declares a global map variable
 
 /*
 initializeMap() is called when page is loaded.
